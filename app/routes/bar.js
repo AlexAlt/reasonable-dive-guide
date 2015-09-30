@@ -27,6 +27,17 @@ export default Ember.Route.extend({
       if(confirm('Are you sure you want to delete?')) {
       model.destroyRecord();
       }
+    },
+    updateBar(bar, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key] !== undefined) {
+          bar.set(key, params[key])
+        }
+      });
+      bar.save().then(function(bar) {
+        bar.reload();
+      });
+      this.transitionTo('bar');
     }
   }
 
