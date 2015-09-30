@@ -1,0 +1,7 @@
+.jumbotron {
+  margin-bottom: 0;
+  background-image: url('/assets/images/headerimage.jpg');
+  background-size: cover;
+  color: white;
+  font-family: 'Jura', sans-serif;
+}
