@@ -2,8 +2,50 @@
 
 <h2>RHG Neighborhoods</h2>
 
-<ul style="list-style:none">
-  {{#each model as |neighborhood|}}
-    {{#link-to 'neighborhood' neighborhood.id}}<li>{{neighborhood.name}}</li>{{/link-to}}
-  {{/each}}
-</ul>
+<div class="hood-wrapper">
+
+  <div class='container row'>
+    <div class="no-po-tile">
+      {{#each model.noPoNeighborhoods as |neighborhood|}}
+        {{#link-to 'neighborhood' neighborhood.id class="hood-links"}} {{neighborhood.name}} {{/link-to}}
+      {{/each}}
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class="col-md-6">
+      <div class="northwest-tile">
+        {{#each model.northwestNeighborhoods as |neighborhood|}}
+          {{#link-to 'neighborhood' neighborhood.id class="hood-links"}} {{neighborhood.name}} {{/link-to}}
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="northeast-tile">
+        {{#each model.northeastNeighborhoods as |neighborhood|}}
+          {{#link-to 'neighborhood' neighborhood.id class="hood-links"}} {{neighborhood.name}} {{/link-to}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="southwest-tile">
+        {{#each model.southwestNeighborhoods as |neighborhood|}}
+          {{#link-to 'neighborhood' neighborhood.id class="hood-links"}} {{neighborhood.name}} {{/link-to}}
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="southeast-tile">
+        {{#each model.southeastNeighborhoods as |neighborhood|}}
+          {{#link-to 'neighborhood' neighborhood.id class="hood-links"}} {{neighborhood.name}} {{/link-to}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+</div>

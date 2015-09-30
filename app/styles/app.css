@@ -10,3 +10,47 @@
   color: #73BFB8;
   font-family: 'Jura', sans-serif;
 }
+
+.hood-links {
+  color: white;
+  font-family: 'Jura', sans-serif;
+  font-size: 3em;
+  margin-top: 20px;
+  background-color: rgba(245, 222, 179, .9);
+}
+
+.no-po-tile {
+  background-image: url("/assets/images/noPo.jpg");
+  height: 200px;
+  text-align: center;
+  margin: 8px auto;
+}
+
+
+.northwest-tile {
+  background-image: url("/assets/images/northwest.jpg");
+  height: 300px;
+  text-align: center;
+  margin: 8px auto;
+}
+
+.northeast-tile {
+  background-image: url("/assets/images/northeast.jpg");
+  height: 300px;
+  text-align: center;
+  margin: 8px auto;
+}
+
+.southeast-tile {
+  background-image: url("/assets/images/southeast.jpg");
+  height: 300px;
+  text-align: center;
+  margin: 8px auto;
+}
+
+.southwest-tile {
+  background-image: url("/assets/images/southwest.jpg");
+  height: 300px;
+  text-align: center;
+  margin: 8px auto;
+}
