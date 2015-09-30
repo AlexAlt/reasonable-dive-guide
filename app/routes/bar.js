@@ -22,6 +22,11 @@ export default Ember.Route.extend({
         bar.reload();
       });
       this.transitionTo('bar');
+    },
+    deleteReview(model) {
+      if(confirm('Are you sure you want to delete?')) {
+      model.destroyRecord();
+      }
     }
   }
 

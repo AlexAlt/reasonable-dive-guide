@@ -1,10 +1,13 @@
 {{outlet}}
 
-<h2>{{model.name}}</h2>
+<h2>
+  {{model.name}}<br>
+  <small>{{model.location}}</small>
+</h2>
 
 <ul style="list-style:none">
   {{#each model.reviews as |review|}}
-    {{review-tile update="update" model=review}}
+    {{review-tile update="update" deleteReview="deleteReview" model=review}}
   {{/each}}
 </ul>
 
