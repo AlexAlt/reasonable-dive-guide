@@ -1,0 +1,11 @@
+{{outlet}}
+
+<h2>{{model.name}}</h2>
+
+<ul style="list-style:none">
+  {{#each model.reviews as |review|}}
+    {{review.tagline}}
+  {{/each}}
+</ul>
+
+{{new-review saveReview="saveReview" bar=model}}

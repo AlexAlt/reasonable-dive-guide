@@ -1,1 +1,21 @@
 {{yield}}
+
+{{#if addBar}}
+<div>
+  <form>
+    <h3>Add A New Bar</h3>
+    <div class="form-group">
+      {{input value=name id="name" class="form-control" placeholder="Bar Name"}}
+    </div>
+
+    <div class="form-group">
+      {{input value=location id="location" class="form-control" placeholder="Location"}}
+    </div>
+
+    <button {{action "saveBar" category}} class="btn btn-default">Add</button>
+    <button {{action 'barFormHide'}} class="btn btn-default">Cancel</button>
+  </form>
+</div>
+{{else}}
+<button {{action 'barFormShow'}} class="btn btn-default">Click to Add a Bar</button>
+{{/if}}

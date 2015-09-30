@@ -4,6 +4,8 @@
 
 <ul style="list-style:none">
   {{#each model.bars as |bar|}}
-    {{bar.name}}
+    {{#link-to 'bar' bar.id}}{{bar.name}}{{/link-to}}
   {{/each}}
 </ul>
+
+{{new-bar saveBar="saveBar" neighborhood=model}}
