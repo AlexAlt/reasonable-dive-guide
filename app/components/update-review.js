@@ -1,13 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  addReview: false,
+  updateReview: false,
 
   actions: {
     reviewFormShow() {
-      this.set('addReview', true);
+      this.set('updateReview', true);
     },
-    saveReview() {
+    update(review) {
       var params = {
         tagline: this.get('tagline'),
         userName: this.get('userName'),
@@ -18,11 +18,11 @@ export default Ember.Component.extend({
         happyHour: this.get('happyHour'),
         bar: this.get('bar')
       }
-      this.sendAction("saveReview", params);
-      this.set('addReview', false);
+      this.sendAction("update", review, params);
+      this.set('updateReview', false);
     },
-    reviewFormHide() {
-      this.set('addReview', false);
+    updateHide() {
+    this.set('updateReview', false);
     }
   }
 });

@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('neighborhood', {path: '/neighborhood/:neighborhood_id'});
   this.route('bar', {path: '/bar/:bar_id'});
+  this.route('about');
 });
 
 export default Router;
