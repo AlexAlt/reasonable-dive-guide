@@ -18,8 +18,16 @@ export default Ember.Component.extend({
         happyHour: this.get('happyHour'),
         bar: this.get('bar')
       }
-      this.sendAction("update", review, params);
+      this.set('tagline', undefined);
+      this.set('userName', undefined);
+      this.set('dateVisited', undefined);
+      this.set('reasonRating', undefined);
+      this.set('diveRating', undefined);
+      this.set('anecdotes', undefined);
+      this.set('happyHour', undefined);
+    
       this.set('updateReview', false);
+      this.sendAction("update", review, params);
     },
     updateHide() {
     this.set('updateReview', false);

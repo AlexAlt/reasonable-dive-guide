@@ -13,9 +13,11 @@ export default Ember.Component.extend({
         location: this.get('location'),
         neighborhood: this.get('neighborhood')
       }
-      debugger;
-      this.sendAction("updateBar", bar, params);
+      this.set('name', undefined);
+      this.set('location', undefined);
+      
       this.set('updateBarForm', false);
+      this.sendAction("updateBar", bar, params);
     },
     hideBarForm() {
       this.set('updateBarForm', false);

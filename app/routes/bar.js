@@ -34,10 +34,8 @@ export default Ember.Route.extend({
           bar.set(key, params[key])
         }
       });
-      bar.save().then(function(bar) {
-        bar.reload();
-      });
-      this.transitionTo('bar');
+      bar.save();
+      this.transitionTo('bar', bar);
     }
   }
 
