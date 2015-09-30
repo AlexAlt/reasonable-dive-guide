@@ -1,0 +1,9 @@
+{{outlet}}
+
+<h2>Reviews and Guides to Reasonably Priced Bars in Portland</h2>
+
+<ul style="list-style:none">
+  {{#each model as |neighborhood|}}
+    {{#link-to 'neighborhood' neighborhood.id}}<li>{{neighborhood.name}}</li>{{/link-to}}
+  {{/each}}
+</ul>
