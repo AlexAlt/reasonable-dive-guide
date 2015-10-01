@@ -4,22 +4,19 @@
   {{model.name}}<br>
   <small>{{model.location}}</small>
 </h2>
+{{update-bar updateBar="updateBar" bar=model class="container"}}
 
+<h4>Reviews:</h4>
 <ul style="list-style:none">
   {{#each model.reviews as |review|}}
     {{review-tile update="update" deleteReview="deleteReview" model=review}}
   {{/each}}
 </ul>
 
-<div class="row">
-  <div class="col-sm-3">
-    {{new-review saveReview="saveReview" bar=model}}
-  </div>
+<div class="container">
+  {{new-review saveReview="saveReview" bar=model}}
+  <hr>
 
-  <div class="col-sm-3">
-    {{update-bar updateBar="updateBar" bar=model}}
-  </div>
+  <button class="btn btn-danger" {{action "deleteBar" model}}>Delete Bar</button>
+  {{#link-to 'neighborhood' model.neighborhood.id class="btn btn-default"}}Back{{/link-to}}
 </div>
-
-<button class="btn btn-danger" {{action "deleteBar" model}}>Delete Bar</button>
-<button class="btn btn-success" id="back-btn">{{#link-to 'neighborhood' model.neighborhood.id}}Back{{/link-to}}</button>

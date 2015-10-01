@@ -78,13 +78,3 @@
   float: right;
   margin-bottom: 50px;
 }
-
-#back-btn :visited {
-  color: white;
-  text-decoration: none;
-}
-
-#back-btn :hover {
-  color: white;
-  text-decoration: none;
-}

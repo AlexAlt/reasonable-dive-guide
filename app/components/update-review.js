@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  tagName: "span",
   updateReview: false,
 
   actions: {
@@ -25,7 +26,7 @@ export default Ember.Component.extend({
       this.set('diveRating', undefined);
       this.set('anecdotes', undefined);
       this.set('happyHour', undefined);
-    
+
       this.set('updateReview', false);
       this.sendAction("update", review, params);
     },

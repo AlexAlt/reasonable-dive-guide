@@ -9,8 +9,7 @@
   <li class="list-group-item">Diviness:<br> {{model.diveRating}}</li>
   <li class="list-group-item">What happened?<br> {{model.anecdotes}}</li>
   <li class="list-group-item">Happy Hour?<br> {{model.happyHour}}</li>
-  <li class="list-group-item">{{update-review update="update" review=model}}</li>
-  <li class="list-group-item"><button class="btn btn-danger" {{action 'deleteReview' model}}>Delete</button></li>
+  <li class="list-group-item"><button class="btn btn-danger" {{action 'deleteReview' model}}>X</button>{{update-review update="update" review=model}}</li>
 </ul>
 
 <br>

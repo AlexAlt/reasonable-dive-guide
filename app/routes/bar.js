@@ -5,8 +5,6 @@ export default Ember.Route.extend({
     return this.store.findRecord('bar', params.bar_id)
   },
 
-
-
   actions: {
     saveReview(params){
       var newReview = this.store.createRecord('review', params);
