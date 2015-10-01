@@ -1,12 +1,22 @@
 {"neighborhoods": [{
-  "name": "NorthWest"
+  "name": "NorthWest",
+  "longitude": "-122.692644",
+  "latitude": "45.532014"
   }, {
-  "name": "SouthWest"
+  "name": "SouthWest",
+  "longitude": "-122.684194",
+  "latitude": "45.517169"
 }, {
-  "name": "NorthEast"
+  "name": "NorthEast",
+  "longitude": "-122.631332",
+  "latitude": "45.543140"
 }, {
-  "name": "SouthEast"
+  "name": "SouthEast",
+  "longitude": "-122.641383",
+  "latitude": "45.509419"
 }, {
-  "name": "North Portland"
+  "name": "North Portland",
+  "longitude": "-122.692644",
+  "latitude": "45.532014"
 }
 ]}

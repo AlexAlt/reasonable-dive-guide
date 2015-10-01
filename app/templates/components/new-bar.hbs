@@ -12,6 +12,14 @@
       {{input value=location id="location" class="form-control" placeholder="Location"}}
     </div>
 
+    <div class="form-group">
+      {{input value=longitude id="longitude" class="form-control" placeholder="Longitude"}}
+    </div>
+
+    <div class="form-group">
+      {{input value=latitude id="latitude" class="form-control" placeholder="Latitude"}}
+    </div>
+
     <button {{action "saveBar" category}} class="btn btn-default">Add</button>
     <button {{action 'barFormHide'}} class="btn btn-default">Cancel</button>
   </form>

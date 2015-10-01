@@ -9,7 +9,7 @@ export default Ember.Route.extend({
       var newBar = this.store.createRecord('bar', params);
       newBar.save();
       params.neighborhood.save();
-    } 
+    }
   }
 
 });

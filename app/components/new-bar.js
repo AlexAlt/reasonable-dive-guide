@@ -11,6 +11,8 @@ export default Ember.Component.extend({
       var params = {
         name: this.get('name'),
         location: this.get('location'),
+        longitude: this.get('longitude'),
+        latitude: this.get('latitude'),
         neighborhood: this.get('neighborhood')
       }
       this.sendAction("saveBar", params);
