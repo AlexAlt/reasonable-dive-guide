@@ -19,14 +19,16 @@ export default Ember.Component.extend({
         var marker = undefined;
         var lat = bar.get('latitude');
         var lng = bar.get('longitude');
+
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(lat, lng),
           map: ourMap,
-          title: (bar.get('name')),
+          title: (bar.get('name'))
         });
+        var contentLink = '<a href="/bar/' + bar.id + '">' + bar.get('name') + '</a>';
 
         var infowindow = new google.maps.InfoWindow({
-          content: marker.title
+          content: contentLink
         });
         marker.addListener('click', function() {
           infowindow.open(ourMap, marker);
