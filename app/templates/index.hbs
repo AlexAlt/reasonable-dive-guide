@@ -1,11 +1,12 @@
 {{outlet}}
 
+
 <div class="hood-wrapper">
 
   <div class='container row'>
     <div class="no-po-tile">
       {{#each model.noPoNeighborhoods as |neighborhood|}}
-        {{#link-to 'neighborhood' neighborhood.id class="hood-links"}} {{neighborhood.name}} {{/link-to}}
+        {{#link-to 'neighborhood' neighborhood.id id="no-po-link"}} <span class="hood-links"> {{neighborhood.name}} </span> {{/link-to}}
       {{/each}}
     </div>
   </div>
@@ -14,7 +15,7 @@
     <div class="col-md-6">
       <div class="northwest-tile">
         {{#each model.northwestNeighborhoods as |neighborhood|}}
-          {{#link-to 'neighborhood' neighborhood.id class="hood-links"}} {{neighborhood.name}} {{/link-to}}
+          {{#link-to 'neighborhood' neighborhood.id id="northwest-link"}} <span class="hood-links"> {{neighborhood.name}} </span>{{/link-to}}
         {{/each}}
       </div>
     </div>
@@ -22,7 +23,7 @@
     <div class="col-md-6">
       <div class="northeast-tile">
         {{#each model.northeastNeighborhoods as |neighborhood|}}
-          {{#link-to 'neighborhood' neighborhood.id class="hood-links"}} {{neighborhood.name}} {{/link-to}}
+          {{#link-to 'neighborhood' neighborhood.id id="northeast-link"}} <span class="hood-links"> {{neighborhood.name}} </span>{{/link-to}}
         {{/each}}
       </div>
     </div>
@@ -32,7 +33,7 @@
     <div class="col-md-6">
       <div class="southwest-tile">
         {{#each model.southwestNeighborhoods as |neighborhood|}}
-          {{#link-to 'neighborhood' neighborhood.id class="hood-links"}} {{neighborhood.name}} {{/link-to}}
+          {{#link-to 'neighborhood' neighborhood.id id="southwest-link"}} <span class="hood-links"> {{neighborhood.name}} </span>{{/link-to}}
         {{/each}}
       </div>
     </div>
@@ -40,7 +41,7 @@
     <div class="col-md-6">
       <div class="southeast-tile">
         {{#each model.southeastNeighborhoods as |neighborhood|}}
-          {{#link-to 'neighborhood' neighborhood.id class="hood-links"}} {{neighborhood.name}} {{/link-to}}
+          {{#link-to 'neighborhood' neighborhood.id id="southeast-link"}} <span class="hood-links"> {{neighborhood.name}} </span>{{/link-to}}
         {{/each}}
       </div>
     </div>
