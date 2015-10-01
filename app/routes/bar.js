@@ -5,6 +5,8 @@ export default Ember.Route.extend({
     return this.store.findRecord('bar', params.bar_id)
   },
 
+
+
   actions: {
     saveReview(params){
       var newReview = this.store.createRecord('review', params);
@@ -27,6 +29,17 @@ export default Ember.Route.extend({
       if(confirm('Are you sure you want to delete?')) {
       model.destroyRecord();
       }
+    },
+    deleteBar(model) {
+      var review_deletions = model.get('reviews').map(function(review) {
+        return review.destroyRecord();
+      });
+
+      Ember.RSVP.all(review_deletions)
+        .then(function() {
+          return model.destroyRecord();
+      })
+      this.transitionTo('index');
     },
     updateBar(bar, params) {
       Object.keys(params).forEach(function(key) {

@@ -2,7 +2,7 @@
 
 <h2>
   {{model.name}}<br>
-  <small>{{model.location}}{{update-bar updateBar="updateBar" bar=model}}</small>
+  <small>{{model.location}}</small>
 </h2>
 
 <ul style="list-style:none">
@@ -11,4 +11,15 @@
   {{/each}}
 </ul>
 
-{{new-review saveReview="saveReview" bar=model}}
+<div class="row">
+  <div class="col-sm-3">
+    {{new-review saveReview="saveReview" bar=model}}
+  </div>
+
+  <div class="col-sm-3">
+    {{update-bar updateBar="updateBar" bar=model}}
+  </div>
+</div>
+
+<button class="btn btn-danger" {{action "deleteBar" model}}>Delete Bar</button>
+<button class="btn btn-success" id="back-btn">{{#link-to 'neighborhood' model.neighborhood.id}}Back{{/link-to}}</button>
