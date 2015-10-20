@@ -1,6 +1,6 @@
 # Reasonable-bar
 
-A simple app written with Ember.js that provides a guide for dive bars in Portland, OR based on neighborhoods. It uses the Google Maps API, Active Record, and a bit of Bootstrap CSS.
+A simple app written with Ember.js that provides a guide for dive bars in Portland, OR based on neighborhoods. It uses the Google Maps API, a Firebase database, and a bit of Bootstrap CSS.
 
 ## Prerequisites
 
