@@ -1,7 +1,6 @@
 # Reasonable-bar
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A simple app written with Ember.js that provides a guide for dive bars in Portland, OR based on neighborhoods. It uses the Google Maps API, Active Record, and a bit of Bootstrap CSS.
 
 ## Prerequisites
 
@@ -15,10 +14,11 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/AlexAlt/reasonable-dive-guide.git` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
+* `$curl -o vendor/gmaps.js https://maps.googleapis.com/maps/api/js?key=` + API key
 
 ## Running / Development
 
@@ -39,9 +39,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
